@@ -9,7 +9,7 @@ def przelicz_wzrost():
         # Przeliczanie na cm lub inch
         if operacja == "1":
             jednostka = "inch"
-            wynik_cm = wzrost * 2.54
+            wynik_cm = round(wzrost * 2.54, 3)
             wynik_label.config(text=f"{wzrost} inch = {wynik_cm} cm", bg="white", fg="navy", font=("Arial", 16, "bold"))
         elif operacja == "2":
             jednostka = "cm"
