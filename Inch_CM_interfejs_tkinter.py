@@ -28,7 +28,7 @@ def przelicz_wzrost():
                 stopki = round(wzrost * 0.0833333, 3)
                 stopki_label.config(text=f"{wzrost} inch = {stopki} feet", bg="white", fg="navy", font=("Arial", 14))
         else:
-            stopki_label.config(text="")  # Jeśli nie chcesz przeliczać na stopy, usuń wynik
+            stopki_label.config(text="")
 
     except ValueError:
         messagebox.showerror("Błąd", "Proszę podać poprawny wzrost!")
@@ -36,7 +36,7 @@ def przelicz_wzrost():
 # Utworzenie głównego okna
 root = tk.Tk()
 root.title("Przelicznik jednostek")
-root.geometry("400x450")  # Zwiększono rozmiar okna, aby pomieścić wyniki
+root.geometry("400x450")  # Większy rozmiar okna, aby pomieścić wyniki
 
 # Opis i etykieta
 etkieta_wzrost = tk.Label(root, text="Podaj wzrost/odległość:")
@@ -72,7 +72,7 @@ przeliczenie_no.pack()
 przycisk_oblicz = tk.Button(root, text="Przelicz", command=przelicz_wzrost)
 przycisk_oblicz.pack(pady=20)
 
-# Miejsce na wynik przeliczenia na cm/inch
+# Miejsce na wynik cm/inch
 wynik_label = tk.Label(root, text="", font=("Arial", 16), width=30, height=2)
 wynik_label.pack(pady=10)
 
